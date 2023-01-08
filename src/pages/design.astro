@@ -1,14 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import Lightbox from '../components/Lightbox.jsx';
 ---
 
 <Layout title="Ines Benrhannou - Design">
 	<Navbar page="design" />
 	<section class="hero is-fullheight">
 		<div class="hero-body">
-			<p>quelques sketch et un du design</p>
+			<!-- quelques sketch et un du design -->
+			<h1 class="title">Design</h1>
+			<div class="gallery-item">
+				<Lightbox client:visible poster="img/sketch1.jpg" />
+				<Lightbox client:visible poster="img/sketch3.jpg" />
+			</div>
+			<div class="gallery-item">
+				<Lightbox client:visible poster="img/sketch7.jpg" />
+				<Lightbox client:visible poster="img/sketch8.jpg" />
+			</div>
 			
 		</div>
 	</section>
 </Layout>
+
+<style lang="scss">
+	section {
+		background-color: black;
+		padding-top: 50px;
+
+		h1 {
+			color: white !important;
+			font-size: 3rem !important;
+			font-family: 'ClashDisplay-Medium';
+			margin-bottom: 80px !important;
+			letter-spacing: 2px;
+		}
+	}
+	.hero-body {
+		display: flex;
+		flex-direction: column;
+	}
+	.gallery-item {
+		display: flex;
+		// width: 100%;
+		justify-content: space-around;
+		align-items: center;
+	}
+</style>
