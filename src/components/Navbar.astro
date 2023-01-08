@@ -1,5 +1,5 @@
 ---
-
+const { page } = Astro.props;
 ---
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -18,11 +18,12 @@
 		</div> -->
 		<div class="navbar-end">
 			<div class="navbar-item">
-				<a class="navbar-item">Design</a>
-				<a class="navbar-item">Projet</a>
-				<a class="navbar-item">Master</a>
-				<a class="navbar-item">Contact</a>
-				<a class="navbar-item">A propos</a>
+				<a class:list={['navbar-item', { active: page === 'design' }]} href="design">Design</a>
+				<a class:list={['navbar-item', { active: page === 'projet' }]} class="navbar-item">Projet</a>
+				<a class:list={['navbar-item', { active: page === 'portfolio' }]} class="navbar-item">Portfolio</a>
+				<a class:list={['navbar-item', { active: page === 'master' }]}>Master</a>
+				<a class:list={['navbar-item', { active: page === 'contact' }]}>Contact</a>
+				<a class:list={['navbar-item', { active: page === 'apropos' }]}>A propos</a>
 			</div>
 		</div>
 	</div>
@@ -48,9 +49,14 @@
 
 	.navbar-item {
 		color: white;
+		border-radius: 50px;
+		margin: 0 5px;
 		&:hover {
 			// background-color: transparent !important;
-			border-radius: 50px;
+			color: black !important;
+		}
+		&.active {
+			background-color: white !important;
 			color: black !important;
 		}
 	}
