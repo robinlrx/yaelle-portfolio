@@ -8,7 +8,7 @@ const Lightbox = ({poster}) => {
 
 	return (
 		<>
-			<img src={poster} width="40%" alt=""onClick={() => setToggler(!toggler)} style={{cursor: 'pointer', marginBottom: '20px'}} />
+			<img src={poster} width={"80%"} alt=""onClick={() => setToggler(!toggler)} style={{cursor: 'pointer', marginBottom: '20px'}} />
 			<FsLightbox
 				toggler={toggler}
 				sources={[

@@ -6,27 +6,30 @@ import Lightbox from '../components/Lightbox.jsx';
 
 <Layout title="Ines Benrhannou - Design">
 	<Navbar page="design" />
-	<section class="hero is-fullheight">
-		<div class="hero-body">
-			<!-- quelques sketch et un du design -->
+	<section>
+		<div class="container is-fluid">
 			<h1 class="title">Design</h1>
-			<div class="gallery-item">
-				<Lightbox client:visible poster="img/sketch1.jpg" />
-				<Lightbox client:visible poster="img/sketch3.jpg" />
+			<div class="columns">
+				<div class="column">
+					<Lightbox client:visible poster="img/sketch1.jpg" />
+					<Lightbox client:visible poster="img/sketch3.jpg" />
+				</div>
+				<div class="column">
+					<Lightbox client:visible poster="img/sketch7.jpg" />
+					<Lightbox client:visible poster="img/sketch8.jpg" />
+				</div>
 			</div>
-			<div class="gallery-item">
-				<Lightbox client:visible poster="img/sketch7.jpg" />
-				<Lightbox client:visible poster="img/sketch8.jpg" />
-			</div>
-			
 		</div>
+		<!-- quelques sketch et un du design -->
 	</section>
 </Layout>
 
 <style lang="scss">
 	section {
 		background-color: black;
-		padding-top: 50px;
+		padding-top: 100px;
+		min-height: 100vh;
+		overflow: hidden;
 
 		h1 {
 			color: white !important;
@@ -34,16 +37,14 @@ import Lightbox from '../components/Lightbox.jsx';
 			font-family: 'ClashDisplay-Medium';
 			margin-bottom: 80px !important;
 			letter-spacing: 2px;
+			text-align: center;
 		}
 	}
-	.hero-body {
+	.column {
 		display: flex;
 		flex-direction: column;
-	}
-	.gallery-item {
-		display: flex;
-		// width: 100%;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
+		// border: solid 1px yellow;
 	}
 </style>
