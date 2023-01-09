@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import FsLightbox from 'fslightbox-react';
 
-const Lightbox = ({poster}) => {
+const Lightbox = ({poster, sources}) => {
 
 	const [toggler, setToggler] = useState(false);
 
@@ -11,9 +11,7 @@ const Lightbox = ({poster}) => {
 			<img src={poster} width={"80%"} alt=""onClick={() => setToggler(!toggler)} style={{cursor: 'pointer', marginBottom: '20px'}} />
 			<FsLightbox
 				toggler={toggler}
-				sources={[
-					poster
-				]}
+				sources={sources}
 			/>
 
 		</>
