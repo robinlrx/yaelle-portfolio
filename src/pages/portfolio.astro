@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Pdf from '../components/Pdf';
+---
+
+<Layout title="Portfolio - Ines Benrhannou">
+	<Navbar page="portfolio" />
+	<section>
+		<h1>Portfolio</h1>
+		<Pdf file="pdf\SKETCHBOOK BENRHANNOU INES CREAPOLE ESDI.pdf" />
+	</section>
+</Layout>
+
+<style lang="scss">
+	section {
+		background-color: black;
+		padding-top: 100px;
+		min-height: 100vh;
+		overflow: hidden;
+
+		h1 {
+			color: white !important;
+			font-size: 3rem !important;
+			font-family: 'ClashDisplay-Medium';
+			margin-bottom: 80px !important;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+	}
+</style>
