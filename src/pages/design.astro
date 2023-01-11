@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
-import Lightbox from '../components/Lightbox.jsx';
+import ReactLightbox from '../components/ReactLightbox.jsx';
 ---
 
 <Layout title="Ines Benrhannou - Design">
@@ -11,12 +11,12 @@ import Lightbox from '../components/Lightbox.jsx';
 			<h1 class="title">Design</h1>
 			<div class="columns">
 				<div class="column">
-					<Lightbox client:only="react" poster="/img/sketch1.jpg" sources={["/img/sketch1.jpg"]} />
-					<Lightbox client:only="react" poster="/img/sketch3.jpg" sources={["/img/sketch3.jpg"]} />
+					<ReactLightbox client:only="react" poster="/img/sketch1.jpg" sources={{ src: "/img/sketch1.jpg" }} />
+					<ReactLightbox client:only="react" poster="/img/sketch3.jpg" sources={{ src: "/img/sketch3.jpg" }} />
 				</div>
 				<div class="column">
-					<Lightbox client:only="react" poster="/img/sketch7.jpg" sources={["/img/sketch7.jpg"]} />
-					<Lightbox client:only="react" poster="/img/sketch8.jpg" sources={["/img/sketch8.jpg"]} />
+					<ReactLightbox client:only="react" poster="/img/sketch7.jpg" sources={{ src: "/img/sketch7.jpg" }} />
+					<ReactLightbox client:only="react" poster="/img/sketch8.jpg" sources={{ src: "/img/sketch8.jpg" }} />
 				</div>
 			</div>
 		</div>
