@@ -19,12 +19,12 @@ const { page } = Astro.props;
 			</div> -->
 			<div class="navbar-end">
 				<div class="navbar-item">
-					<a class:list={['navbar-item', { active: page === 'design' }]} href="design">Design</a>
-					<a class:list={['navbar-item', { active: page === 'projets' }]} href="projets">Projets</a>
-					<a class:list={['navbar-item', { active: page === 'portfolio' }]} href="portfolio">Portfolio</a>
-					<a class:list={['navbar-item', { active: page === 'master' }]} href="master">Master</a>
+					<a class:list={['navbar-item', { active: page === 'design' }]} href="/design">Design</a>
+					<a class:list={['navbar-item', { active: page === 'projets' }]} href="/projets">Projets</a>
+					<a class:list={['navbar-item', { active: page === 'portfolio' }]} href="/portfolio">Portfolio</a>
+					<a class:list={['navbar-item', { active: page === 'master' }]} href="/master">Master</a>
 					<!-- <a class:list={['navbar-item', { active: page === 'contact' }]}>Contact</a> -->
-					<a class:list={['navbar-item', { active: page === 'apropos' }]} href="apropos">A propos</a>
+					<a class:list={['navbar-item', { active: page === 'apropos' }]} href="/apropos">A propos</a>
 				</div>
 			</div>
 		</div>
