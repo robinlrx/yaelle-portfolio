@@ -2,22 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 ---
-
-<Layout title="Portfolio - Ines Benrhannou">
-	<Navbar page="portfolio" />
+<Layout title="A propos - Ines Benrhannou">
+	<Navbar page="apropos"/>
 	<section>
 		<div class="container is-fluid">
-			<h1 class="title">Portfolio</h1>
+			<h1 class="title">A propos</h1>
 			<div class="columns">
 				<div class="column">
-					<h2 class="subtitle">Mon Book</h2>
-					<iframe src="pdf/BOOK BENRHANNOU INES CREAPOLE ESDI.pdf" width="80%" height="600px"></iframe>
-				</div>
-			</div>
-			<div class="columns">
-				<div class="column">
-					<h2 class="subtitle">Mon sketchbook</h2>
-					<iframe src="pdf/SKETCHBOOK BENRHANNOU INES CREAPOLE ESDI.pdf" width="80%" height="600px"></iframe>
+					<h2 class="subtitle">Mon cv</h2>
+					<img src="img/cv-ines.jpg" alt="">
 				</div>
 			</div>
 		</div>
@@ -39,18 +32,9 @@ import Navbar from '../components/Navbar.astro';
 			letter-spacing: 2px;
 			text-align: center;
 		}
-	}
-	.column {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding-bottom: 30px;
-		// border: solid 1px yellow;
 
 		h2 {
 			color: white !important;
-			width: 80%; // same as lightbox image
 			font-family: 'ClashDisplay-Regular';
 			font-size: 2rem !important;
 			// align-self: baseline;

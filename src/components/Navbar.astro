@@ -5,7 +5,7 @@ const { page } = Astro.props;
 <nav class="navbar" role="navigation" aria-label="main navigation">
 	<div class="container is-fluid">
 		<div class="navbar-brand">
-			<a class="navbar-item" href="./">Ines B.</a>
+			<a class="navbar-item logo" href="./">Ines B.</a>
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -22,9 +22,9 @@ const { page } = Astro.props;
 					<a class:list={['navbar-item', { active: page === 'design' }]} href="design">Design</a>
 					<a class:list={['navbar-item', { active: page === 'projets' }]} href="projets">Projets</a>
 					<a class:list={['navbar-item', { active: page === 'portfolio' }]} href="portfolio">Portfolio</a>
-					<a class:list={['navbar-item', { active: page === 'master' }]}>Master</a>
-					<a class:list={['navbar-item', { active: page === 'contact' }]}>Contact</a>
-					<a class:list={['navbar-item', { active: page === 'apropos' }]}>A propos</a>
+					<a class:list={['navbar-item', { active: page === 'master' }]} href="master">Master</a>
+					<!-- <a class:list={['navbar-item', { active: page === 'contact' }]}>Contact</a> -->
+					<a class:list={['navbar-item', { active: page === 'apropos' }]} href="apropos">A propos</a>
 				</div>
 			</div>
 		</div>
@@ -45,6 +45,13 @@ const { page } = Astro.props;
 
 		.navbar-burger {
 			color: white;
+		}
+
+		.logo {
+			color: white;
+			&:hover {
+				color: white !important;
+			}
 		}
 	}
 
