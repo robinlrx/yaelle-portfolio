@@ -11,8 +11,8 @@ import Lightbox from '../components/Lightbox.jsx';
 			<h1 class="title">Design</h1>
 			<div class="columns">
 				<div class="column">
-					<Lightbox client:visible poster="img/sketch1.jpg" sources={["img/sketch1.jpg"]} />
-					<Lightbox client:visible poster="img/sketch3.jpg" sources={["img/sketch3.jpg"]} />
+					<Lightbox client:only="react" poster="img/sketch1.jpg" sources={["img/sketch1.jpg"]} />
+					<Lightbox client:only="react" poster="img/sketch3.jpg" sources={["img/sketch3.jpg"]} />
 				</div>
 				<div class="column">
 					<Lightbox client:visible poster="img/sketch7.jpg" sources={["img/sketch7.jpg"]} />
