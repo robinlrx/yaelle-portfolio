@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-const ReactLightbox = ({poster, sources}) => {
+const ReactLightbox = ({poster, sources, thumbnails}) => {
 
 	const [open, setOpen] = useState(false);
 
@@ -13,12 +15,8 @@ const ReactLightbox = ({poster, sources}) => {
 			<Lightbox
 				open={open}
 				close={() => setOpen(false)}
-				slides={[
-				// { src: "/image1.jpg" },
-				// { src: "/image2.jpg" },
-				// { src: "/image3.jpg" },
-				sources
-				]}
+				slides={sources}
+				plugins={thumbnails == true ? [Thumbnails] : null}
 			/>
 
 		</>
