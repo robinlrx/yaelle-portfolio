@@ -4,17 +4,17 @@ import Navbar from '../components/Navbar.astro';
 import ReactLightbox from '../components/ReactLightbox.jsx';
 ---
 
-<Layout title="Ines Benrhannou - Design">
+<Layout title="Design - Ines Benrhannou">
 	<Navbar page="design" />
 	<section>
 		<div class="container is-fluid">
-			<h1 class="title">Design</h1>
+			<h1 class="title reveal-1">Design</h1>
 			<div class="columns">
-				<div class="column">
+				<div class="column reveal-2">
 					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch1.jpg" sources={[{ src: "/img/sketch1.jpg" }]} />
 					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch3.jpg" sources={[{ src: "/img/sketch3.jpg" }]} />
 				</div>
-				<div class="column">
+				<div class="column reveal-2">
 					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch7.jpg" sources={[{ src: "/img/sketch7.jpg" }]} />
 					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch8.jpg" sources={[{ src: "/img/sketch8.jpg" }]} />
 				</div>
