@@ -9,14 +9,19 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 	<section>
 		<div class="container is-fluid">
 			<h1 class="title reveal-1">Design</h1>
+
+			<p class="reveal-2">Un designer est un praticien du design. C'est un professionnel qui possède un haut degré de formation artistique et technique, voire scientifique, ainsi qu'une éthique professionnelle. Il dessine à dessein avec une capacité d'analyse et de conseil auprès de ses commanditaires.</p>
+			<p class="reveal-2">Il est capable d'empathie, d'approche sensible, intuitive et créative pour aborder les sujets. Il a le sens de l'esthétique, des formes et des signes, des couleurs et de la lumière, des sons, des matières et des matériaux, de l'ergonomie et de la lisibilité, et de leur interaction.</p>
+			<p class="reveal-2">Bien qu'il n'ait pas à résoudre des problèmes techniques purs, ce qui est l'affaire de l'ingénieur, le designer suit le bon déroulement technique et la fabrication d'un projet.</p>
+
 			<div class="columns">
 				<div class="column reveal-2">
-					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch1.jpg" sources={[{ src: "/img/sketch1.jpg" }]} />
-					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch3.jpg" sources={[{ src: "/img/sketch3.jpg" }]} />
+					<ReactLightbox client:only="react" thumbnails={false} poster="/img/design/sketch1.jpg" sources={[{ src: "/img/design/sketch1.jpg" }]} />
+					<ReactLightbox client:only="react" thumbnails={false} poster="/img/design/sketch3.jpg" sources={[{ src: "/img/design/sketch3.jpg" }]} />
 				</div>
 				<div class="column reveal-2">
-					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch7.jpg" sources={[{ src: "/img/sketch7.jpg" }]} />
-					<ReactLightbox client:only="react" thumbnails={false} poster="/img/sketch8.jpg" sources={[{ src: "/img/sketch8.jpg" }]} />
+					<ReactLightbox client:only="react" thumbnails={false} poster="/img/design/sketch7.jpg" sources={[{ src: "/img/design/sketch7.jpg" }]} />
+					<ReactLightbox client:only="react" thumbnails={false} poster="/img/design/sketch8.jpg" sources={[{ src: "/img/sketch8.jpg" }]} />
 				</div>
 			</div>
 		</div>
@@ -39,7 +44,17 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 			letter-spacing: 2px;
 			text-align: center;
 		}
+
+		p {
+			font-family: 'PF Din Text Universal light';
+			margin-bottom: 10px;
+		}
 	}
+
+	.columns {
+		margin-top: 10px;
+	}
+
 	.column {
 		display: flex;
 		flex-direction: column;
