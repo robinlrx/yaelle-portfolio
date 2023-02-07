@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout title="Contact - Ines Benrhannou">
+	<Navbar page="contact"/>
+	<section>
+		<div class="container is-fluid">
+			<h1 class="title reveal-1">Contact</h1>
+			<div class="columns">
+				<div class="column reveal-2">
+					<div class="block">
+						<a href="tel:+33695375102">
+							<div class="i ic:baseline-local-phone"></div>
+							<p>0695375102</p>
+						</a>
+					</div>
+					<div class="block">
+						<a href="mailto:inesbenrhannou@gmail.com">
+							<div class="i material-symbols:mail"></div>
+							<p>inesbenrhannou@gmail.com</p>
+						</a>
+					</div>
+					<div class="block">
+						<a href="https://www.linkedin.com/m/in/ines-benrhannou-840aa1202" target="_blank">
+							<div class="i ri:linkedin-fill"></div>
+							<p>Linkedin</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style lang="scss">
+	section {
+		background-color: white;
+		padding-top: 100px;
+		min-height: 100vh;
+		overflow: hidden;
+
+		h1 {
+			color: black !important;
+			font-size: 3rem !important;
+			font-family: 'PF Din Text Universal thin';
+			margin-bottom: 80px !important;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+
+		h2 {
+			color: black !important;
+			font-family: 'PF Din Text Universal thin';
+			font-size: 2rem !important;
+			// align-self: baseline;
+			// border: solid 1px yellow;
+		}
+
+		a {
+			font-size: 2rem !important;
+			color: black !important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			p {
+				margin-left: 10px;
+				font-family: 'PF Din Text Universal regular';
+			}
+		}
+	}
+</style>
