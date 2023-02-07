@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import ReactLightbox from '../components/ReactLightbox.jsx';
 ---
 
 <Layout title="Portfolio - Ines Benrhannou">
@@ -12,12 +13,22 @@ import Navbar from '../components/Navbar.astro';
 				<div class="column reveal-2">
 					<h2 class="subtitle">Mon Book</h2>
 					<iframe src="/pdf/BOOK BENRHANNOU INES CREAPOLE ESDI.pdf" width="80%" height="600px"></iframe>
+					<a href="/pdf/BOOK BENRHANNOU INES CREAPOLE ESDI.pdf" download class="button">Télécharger mon book</a>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column reveal-2">
 					<h2 class="subtitle">Mon sketchbook</h2>
 					<iframe src="/pdf/SKETCHBOOK BENRHANNOU INES CREAPOLE ESDI.pdf" width="80%" height="600px"></iframe>
+					<a href="/pdf/SKETCHBOOK BENRHANNOU INES CREAPOLE ESDI.pdf" download class="button">Télécharger mon sketchbook</a>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column reveal-2">
+					<h2 class="subtitle">Mon CV</h2>
+					<ReactLightbox client:only="react" thumbnails={false} poster="/img/cv-ines.jpg" sources={[{ src: "/img/cv-ines.jpg" }]} />
+
+					<a href="/pdf/cv-ines.pdf" download class="button">Télécharger mon CV</a>
 				</div>
 			</div>
 		</div>
@@ -55,6 +66,20 @@ import Navbar from '../components/Navbar.astro';
 			font-size: 2rem !important;
 			// align-self: baseline;
 			// border: solid 1px yellow;
+		}
+
+		.button {
+			background-color: black;
+			color: white;
+			border: solid 1px transparent;
+			transition: all 0.3s ease-in-out;
+			font-family: 'PF Din Text Universal regular';
+
+			&:hover {
+				background-color: white;
+				color: black;
+				border-color: black;
+			}
 		}
 	}
 </style>
