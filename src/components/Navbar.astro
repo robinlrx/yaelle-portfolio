@@ -5,7 +5,9 @@ const { page } = Astro.props;
 <nav class="navbar" role="navigation" aria-label="main navigation">
 	<div class="container is-fluid">
 		<div class="navbar-brand">
-			<a class="navbar-item logo" href="/">IB</a>
+			<a class="navbar-item logo" href="/">
+				<img src="/img/logo.png" alt="">
+			</a>
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -19,10 +21,10 @@ const { page } = Astro.props;
 			</div> -->
 			<div class="navbar-end">
 				<div class="navbar-item">
-					<a class:list={['navbar-item', { active: page === 'design' }]} href="/design">Design</a>
-					<a class:list={['navbar-item', { active: page === 'projets' }]} href="/projets">Projets</a>
-					<a class:list={['navbar-item', { active: page === 'portfolio' }]} href="/portfolio">CV/Portfolio</a>
-					<a class:list={['navbar-item', { active: page === 'master' }]} href="/master">Master</a>
+					<a class:list={['navbar-item', { active: page === 'design' }]} href="/design">Projets</a>
+					<a class:list={['navbar-item', { active: page === 'projets' }]} href="/projets">OldProjets</a>
+					<!-- <a class:list={['navbar-item', { active: page === 'portfolio' }]} href="/portfolio">CV/Portfolio</a> -->
+					<!-- <a class:list={['navbar-item', { active: page === 'master' }]} href="/master">Master</a> -->
 					<a class:list={['navbar-item', { active: page === 'contact' }]} href="/contact">Contact</a>
 					<!-- <a class:list={['navbar-item', { active: page === 'apropos' }]} href="/apropos">Contact</a> -->
 				</div>
@@ -44,26 +46,25 @@ const { page } = Astro.props;
 		}
 
 		.navbar-burger {
-			color: black;
+			color: #35993A;
 		}
 
-		.logo {
-			color: black;
-			font-size: 1.5rem;
-			&:hover {
-				color: black !important;
-			}
+		.navbar-item img {
+			color: #35993A;
+			// font-size: 1.5rem;
+			width: 50px !important;
+			max-height: 50px !important;
 		}
 	}
 
 
 	.navbar-end a {
-		color: black;
+		color: #35993A;
 		// border-radius: 50px;
 		margin: 0 5px;
 		text-decoration: none;
 		margin-left: 10px;
-		background-image: linear-gradient(90deg, black, black), linear-gradient(90deg, transparent, transparent);
+		background-image: linear-gradient(90deg, #35993A, #35993A), linear-gradient(90deg, transparent, transparent);
 		background-size: 100px 1.5px, 100% 1.5px;
 		background-repeat: no-repeat;
 		background-position-x: calc(100px * -1), 0;
@@ -71,13 +72,13 @@ const { page } = Astro.props;
 		transition: background-position-x 0.8s ease;
 		&:hover {
 			background-color: transparent !important;
-			color: black !important;
+			color: #35993A !important;
 			background-position-x: calc(100% + 100px), 0;
 		}
 		&.active {
 			background-color: transparent !important;
-			color: black !important;
-			border-bottom: solid black 1px;
+			color: #35993A !important;
+			border-bottom: solid #35993A 1px;
 		}
 	}
 </style>
