@@ -10,128 +10,23 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 		<div class="container is-fluid">
 			<h1 class="title reveal-1">Projets</h1>
 			<div class="project-container">
-
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
+				{[...Array(8)].map((_, index) => (
+					<div class="project-item" key={index}>
+						<a href="#" class="project-list-parent">
+							<div class="project-list-top">
+								<div class="project-list-img-parent">
+									<div class="project-tag">
+										<p>Création</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
+							<div class="project-list-btm">
+								<p>Project</p>
+								<p>AOC Block</p>
 							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
-							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
-							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
-							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
-							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
-							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				<div class="project-item">
-					<a href="#" class="project-list-parent">
-						<div class="project-list-top">
-							<div class="project-list-img-parent">
-								<div class="project-tag">
-									<p>Création</p>
-								</div>
-							</div>
-						</div>
-						<div class="project-list-btm">
-							<p>Project</p>
-							<p>AOC Block</p>
-						</div>
-					</a>
-				</div>
-				
+						</a>
+					</div>
+				))}
 			</div>
 			<!-- <div class="columns">
 				<div class="column reveal-2">
@@ -203,7 +98,7 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 	.project-item {
 		// width: calc(100% - 33.33%);
 		border-radius: 12px;
-		border: solid black;
+		border: solid 1px black;
 		overflow: hidden;
 		padding: 0.625rem;
 		position: relative;
