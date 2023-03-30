@@ -29,7 +29,6 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 				))}
 			</div>
 		</div>
-		<!-- quelques sketch et un du design -->
 	</section>
 </Layout>
 
@@ -39,6 +38,7 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 		padding-top: 100px;
 		min-height: 100vh;
 		overflow: hidden;
+		padding-bottom: 20px;
 
 		h1 {
 			color: #045E51 !important;
@@ -104,15 +104,28 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 		border-radius: 20px;
 	}
 
-	.columns {
-		margin-top: 10px;
+	// .columns {
+	// 	margin-top: 10px;
+	// }
+
+	// .column {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
+
+	@media screen and (max-width: 768px) {
+		.project-container {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
 	}
 
-	.column {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		// border: solid 1px yellow;
+	@media screen and (max-width: 426px) {
+		.project-container {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(1, 1fr);
+		}
 	}
 </style>
