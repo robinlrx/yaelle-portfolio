@@ -1,29 +1,32 @@
 ---
+import type { isRenderTemplateResult } from "astro/dist/runtime/server/render/astro";
+
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import ReactLightbox from '../components/ReactLightbox.jsx';
+import data from '../../public/data/projets.json';
 ---
 
-<Layout title="Design - Ines Benrhannou">
+<Layout title="Projets - Yaëlle Zaoui">
 	<Navbar page="design" />
 	<section>
 		<div class="container is-fluid">
 			<h1 class="title reveal-1">Projets</h1>
 			<div class="project-container">
-				{[...Array(8)].map((_, index) => (
+				{data.map((item, index) => (
 					// @ts-ignore
 					<div class="project-item" key={index}>
 						<a href="#" class="project-list-parent">
 							<div class="project-list-top">
-								<div class="project-list-img-parent">
+								<div class="project-list-img-parent" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${item.thumbnail})`}>
 									<div class="project-tag">
-										<p>Création</p>
+										<p>{item.type}</p>
 									</div>
 								</div>
 							</div>
 							<div class="project-list-btm">
 								<p>Project</p>
-								<p>AOC Block</p>
+								<p>{item.name}</p>
 							</div>
 						</a>
 					</div>
@@ -80,10 +83,9 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 	.project-list-img-parent {
 		height: 200px;
 		width: 100%;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/coin-capsule/cc1.png');
-		background-position: contain;
+		// background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 		background-position: center;
-		background-size: 120% 120%;
+		background-size: 150% 150%;
 		background-repeat: no-repeat;
 		border-radius: 12px;
 		transition: background-size 0.3s ease-in-out;
