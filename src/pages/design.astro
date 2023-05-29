@@ -11,6 +11,7 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 			<h1 class="title reveal-1">Projets</h1>
 			<div class="project-container">
 				{[...Array(8)].map((_, index) => (
+					// @ts-ignore
 					<div class="project-item" key={index}>
 						<a href="#" class="project-list-parent">
 							<div class="project-list-top">
