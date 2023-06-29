@@ -16,7 +16,7 @@ import data from '../../public/data/projets.json';
 				{data.map((item, index) => (
 					// @ts-ignore
 					<div class="project-item" key={index}>
-						<a href="#" class="project-list-parent">
+						<a href={item.slug} class="project-list-parent">
 							<div class="project-list-top">
 								<div class="project-list-img-parent" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${item.thumbnail})`}>
 									<div class="project-tag">

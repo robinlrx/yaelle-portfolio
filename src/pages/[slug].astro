@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import data from '../../public/data/projets.json';
+export async function getStaticPaths() {
+	const pages = data;
+	return pages.map(({ slug, name, description, images }) => {
+		return {
+			params: { slug },
+			props: { name, description, images },
+		};
+	});
+}
+
+const { name, description, images } = Astro.props;
+---
+<Layout title={name}>
+	<h1>{name}</h1>
+	<p>{description}</p>
+	<img src={images[0]} alt="">
+</Layout>

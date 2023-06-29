@@ -4,41 +4,47 @@
 		"type": "Création",
 		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
 		"thumbnail": "img/coin-capsule/cc1.png",
-		"images": ["img/coin-capsule/cc1.png", "img/coin-capsule/cc2.png", "img/coin-capsule/cc3.jpg", "img/coin-capsule/cc4.png", "img/coin-capsule/cc5.png"]
+		"images": ["img/coin-capsule/cc1.png", "img/coin-capsule/cc2.png", "img/coin-capsule/cc3.jpg", "img/coin-capsule/cc4.png", "img/coin-capsule/cc5.png"],
+		"slug": "coin-capsule"
 	},
 	{
 		"name": "Coocon",
 		"type": "Création",
 		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
 		"thumbnail": "img/ligne-roset/lr1.jpg",
-		"images": ["img/ligne-roset/lr1.jpg", "img/ligne-roset/lr2.jpg", "img/ligne-roset/lr3.jpg", "img/ligne-roset/lr4.jpg", "img/ligne-roset/lr5.jpg"]
+		"images": ["img/ligne-roset/lr1.jpg", "img/ligne-roset/lr2.jpg", "img/ligne-roset/lr3.jpg", "img/ligne-roset/lr4.jpg", "img/ligne-roset/lr5.jpg"],
+		"slug": "coocon"
 	},
 	{
 		"name": "Social sport",
 		"type": "Création",
 		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
 		"thumbnail": "img/social-sport/ss1.png",
-		"images": ["img/social-sport/ss1.jpg", "img/social-sport/ss2.jpg", "img/social-sport/ss3.jpg", "img/social-sport/ss4.jpg", "img/social-sport/ss5.jpg", "img/social-sport/ss6.jpg", "img/social-sport/ss7.png"]
+		"images": ["img/social-sport/ss1.png", "img/social-sport/ss2.jpg", "img/social-sport/ss3.jpg", "img/social-sport/ss4.jpg", "img/social-sport/ss5.jpg", "img/social-sport/ss6.jpg", "img/social-sport/ss7.png"],
+		"slug": "social-sport"
 	},
 	{
 		"name": "Surf camp",
 		"type": "Création",
 		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
 		"thumbnail": "img/surfcamp/sc1.jpg",
-		"images": ["img/surfcamp/sc1.png", "img/surfcamp/sc2.jpg", "img/surfcamp/sc3.jpg", "img/surfcamp/sc4.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc6.jpg", "img/surfcamp/sc7.jpg", "img/surfcamp/sc8.jpg", "img/surfcamp/sc9.jpg"]
+		"images": ["img/surfcamp/sc1.jpg", "img/surfcamp/sc2.jpg", "img/surfcamp/sc3.jpg", "img/surfcamp/sc4.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc6.jpg", "img/surfcamp/sc7.jpg", "img/surfcamp/sc8.jpg", "img/surfcamp/sc9.jpg"],
+		"slug": "surf-camp"
 	},
 	{
 		"name": "Tour détroit",
 		"type": "Création",
 		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
 		"thumbnail": "img/tour-detroit/td1.jpg",
-		"images": ["img/tour-detroit/td1.jpg", "img/tour-detroit/td2.jpg", "img/tour-detroit/td3.png", "img/tour-detroit/td4.jpg", "img/tour-detroit/td5.jpg", "img/tour-detroit/td6.jpg"]
+		"images": ["img/tour-detroit/td1.jpg", "img/tour-detroit/td2.jpg", "img/tour-detroit/td3.png", "img/tour-detroit/td4.jpg", "img/tour-detroit/td5.jpg", "img/tour-detroit/td6.jpg"],
+		"slug": "tour-detroit"
 	},
 	{
 		"name": "Woodbi",
 		"type": "Création",
 		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
 		"thumbnail": "img/woodbi/w1.jpg",
-		"images": ["img/woodbi/w1.jpg", "img/woodbi/w2.jpg", "img/woodbi/w3.jpg", "img/woodbi/w4.jpg", "img/woodbi/w5.jpg", "img/woodbi/w6.jpg"]
+		"images": ["img/woodbi/w1.jpg", "img/woodbi/w2.jpg", "img/woodbi/w3.jpg", "img/woodbi/w4.jpg", "img/woodbi/w5.jpg", "img/woodbi/w6.jpg"],
+		"slug": "woodbi"
 	}
 ]
