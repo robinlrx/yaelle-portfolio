@@ -10,7 +10,7 @@
 	{
 		"name": "Coocon",
 		"type": "Création",
-		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
+		"description": "Une chaise pour personne seule possédant un animal ? Profiter d’un moment de complicité tout en se relaxant? Voici le projet d’une assiste pour ligne roset. Ma chaise appelée aussi Cocoon est un rondin de noyer et de cuir possédant des tiroirs et s’ouvre afin de pouvoir soit s’assoir dedans ou sur le rebord. Les tiroirs sont aussi bien utilisés par l’animal que pour y ranger des affaires.",
 		"thumbnail": "img/ligne-roset/lr1.jpg",
 		"images": ["img/ligne-roset/lr1.jpg", "img/ligne-roset/lr2.jpg", "img/ligne-roset/lr3.jpg", "img/ligne-roset/lr4.jpg", "img/ligne-roset/lr5.jpg"],
 		"slug": "coocon"
@@ -18,7 +18,7 @@
 	{
 		"name": "Social sport",
 		"type": "Création",
-		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
+		"description": "Un projet de certificat réalisé sur un an. Celui-ci fut l’aménagement d’un social sport club pour la marque Ken group dans un bâtiment à Paris 11ème. Nous retrouvons ici la salle de sport Shoj’hiit, un lieu aux codes architecturaux japonais que nous pouvons voir premièrement par le restaurant, mais aussi par les cloisons appelées « Shoji » revisitées.",
 		"thumbnail": "img/social-sport/ss1.png",
 		"images": ["img/social-sport/ss1.png", "img/social-sport/ss2.jpg", "img/social-sport/ss3.jpg", "img/social-sport/ss4.jpg", "img/social-sport/ss5.jpg", "img/social-sport/ss6.jpg", "img/social-sport/ss7.png"],
 		"slug": "social-sport"
@@ -26,15 +26,15 @@
 	{
 		"name": "Surf camp",
 		"type": "Création",
-		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
+		"description": "Afin de remédier aux problèmes de délinquance au Chili, le créateur de COA, marque de produits de surf, a demandé un surfcamp pour y placer des espaces privatifs mais aussi collectifs. De plus, un centre de conception de planches pour les détenus sera à placer. Afin de séparer le lieu de travail et le lieu privatif, le bâtiment est séparé en deux étages. Le R+1 sera dédié aux chambres dortoirs et salle à manger tandis que le RDC sera pour le centre de conception de planches. Enfin, nous retrouvons des couleurs neutres et naturels en rapport au Chili mais aussi des couleurs fortes et impactantes.",
 		"thumbnail": "img/surfcamp/sc1.jpg",
-		"images": ["img/surfcamp/sc1.jpg", "img/surfcamp/sc2.jpg", "img/surfcamp/sc3.jpg", "img/surfcamp/sc4.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc6.jpg", "img/surfcamp/sc7.jpg", "img/surfcamp/sc8.jpg", "img/surfcamp/sc9.jpg"],
+		"images": ["img/surfcamp/sc1.jpg", "img/surfcamp/sc2.png", "img/surfcamp/sc3.jpg", "img/surfcamp/sc4.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc5.jpg", "img/surfcamp/sc6.jpg", "img/surfcamp/sc7.jpg", "img/surfcamp/sc8.jpg", "img/surfcamp/sc9.jpg"],
 		"slug": "surf-camp"
 	},
 	{
 		"name": "Tour détroit",
 		"type": "Création",
-		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
+		"description": "Détroit est connu pour sa pauvreté certes mais aussi pour ses bâtiments. Ce projet est l’améngament d’un plateau d’une tour à Détroit pour la marque de constructeur KB home. Plusieurs types de familles s’y installant, il a fallut créer des espaces collectifs en plus des logements. Du studio au T3, nous retrouvons des étudiants, des salariés mais aussi des couples avec et sans enfants et des retraités. Le bâtiment étant très lumineux par les baies vitrées.",
 		"thumbnail": "img/tour-detroit/td1.jpg",
 		"images": ["img/tour-detroit/td1.jpg", "img/tour-detroit/td2.jpg", "img/tour-detroit/td3.png", "img/tour-detroit/td4.jpg", "img/tour-detroit/td5.jpg", "img/tour-detroit/td6.jpg"],
 		"slug": "tour-detroit"
@@ -42,7 +42,7 @@
 	{
 		"name": "Woodbi",
 		"type": "Création",
-		"description": "Afin de proposer une nouvelle expérience de voyage à nos ecotravelers qui sont de plus en plus nombreux, nous avons dû créer des capsules hôtels au sein d’un bâtiment de la concession Française à Shanghai. Pour cela, j’ai voulu jouer sur un emboitement de capsules hôtels simples et doubles. Fabriquées à partir de matériaux responsables, ce lieu proposera différentes expériences locales afin de créer un voyage immersif au sein de l’espace.",
+		"description": "Nous avions pour projet ici de construire un tabouret échelle une pour les slowlifers et écologistes afin de simplifier leur quotidien. Voici donc 'Woodbi', une assise aux multifonctions. En forme de cylindre, ce tabouret se sépare en deux parties distinctes, passant ainsi d’une grande assise voir même d’une petite table basse, à deux assises uniques. De plus, cette assise en s’ouvrant donne place à des rangements intérieurs afin de pouvoir y stocker des objets, des livres ect… Sa forme ronde recouverte de jute apporte une touche de naturelle en plus des couleurs du bois clairs et épurées.",
 		"thumbnail": "img/woodbi/w1.jpg",
 		"images": ["img/woodbi/w1.jpg", "img/woodbi/w2.jpg", "img/woodbi/w3.jpg", "img/woodbi/w4.jpg", "img/woodbi/w5.jpg", "img/woodbi/w6.jpg"],
 		"slug": "woodbi"

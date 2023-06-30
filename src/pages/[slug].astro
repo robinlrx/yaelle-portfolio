@@ -1,20 +1,162 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import data from '../../public/data/projets.json';
+import Navbar from '../components/Navbar.astro';
 export async function getStaticPaths() {
 	const pages = data;
-	return pages.map(({ slug, name, description, images }) => {
+	return pages.map(({ slug, name, description, images, type }) => {
 		return {
 			params: { slug },
-			props: { name, description, images },
+			props: { name, description, images, type },
 		};
 	});
 }
 
-const { name, description, images } = Astro.props;
+const { name, description, images, type } = Astro.props;
+
 ---
 <Layout title={name}>
-	<h1>{name}</h1>
-	<p>{description}</p>
-	<img src={images[0]} alt="">
+	<Navbar />
+	<section>
+		<div class="container is-fluid">
+			<div class="hero">
+				<div class="overlay" />
+				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(${images[0]})`>
+					<div class="header">
+						<a href="/design" class="back">
+							<div class="btn-circle">
+							  <img src="https://assets.website-files.com/63cdb916a9b7eb2eab59844a/63f2a3514ae74308e374099b_corner-up-left.svg">
+							</div>
+							<div class="div-hide rel-3">
+								<p>ALL PROJECTS</p>
+								<p>ALL PROJECTS</p>
+							</div>
+						</a>
+						  
+						<h1 class="title reveal-1">{name}</h1>
+						<div class="tag">
+							<p>{type}</p>
+						</div>
+					</div>
+				</div>
+				<!-- <img src={images[0]} alt=""> -->
+			</div>
+			<div>
+				<div class="columns">
+					<div class="column reveal-2">
+						<img src={images[1]} alt="">
+					</div>
+					<div class="column reveal-2">
+						{description.trim().split(". ").map((sentence: string) => {
+							return <p class="sentence">{sentence}</p>
+						})}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<style lang="scss">
+	@keyframes slideIn {
+		0% {
+			padding-bottom: 100%;
+		}
+		100% {
+			padding-bottom: 0;
+		}
+	}
+
+	section {
+		background-color: white;
+		padding-top: 100px;
+		min-height: 100vh;
+		overflow: hidden;
+
+		img, .landscape {
+			border-radius: 5px;
+		}
+	}
+
+	.hero {
+		position: relative;
+		height: 85vh;
+		width: 100%;
+		overflow: hidden;
+
+		.overlay {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			background-color: white;
+			animation: slideIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+		}
+
+		.landscape {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+
+	.header {
+		color: white;
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 30px;
+
+		.back {
+			color: inherit;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn-circle {
+			min-height: 2.5rem;
+			min-width: 2.5rem;
+			border-radius: 100%;
+			background-color: rgba(248,251,252,.2);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+		}
+
+		h1 {
+			color: inherit;
+			font-size: 3rem !important;
+			font-family: 'PF Din Text Universal regular';
+			margin-bottom: 80px !important;
+			letter-spacing: 2px;
+			text-align: center;
+			margin-bottom: 0 !important;
+		}
+
+		.tag {
+			background-color: transparent;
+			padding: 3px 20px;
+			border: 1px solid white;
+			border-radius: 20px;
+			color: inherit;
+			font-size: 0.875rem;
+		}
+	}
+
+	.column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		// border: solid 1px yellow;
+
+		.sentence {
+			color: black !important;
+			width: 80%; // same as lightbox image
+			font-family: 'PF Din Text Universal regular';
+		}
+	}
+</style>
