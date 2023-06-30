@@ -2,15 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import data from '../../public/data/projets.json';
 import Navbar from '../components/Navbar.astro';
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
 	const pages = data;
-	return pages.map(({ slug, name, description, images, type }) => {
-		return {
-			params: { slug },
-			props: { name, description, images, type },
-		};
-	});
+	return pages.map(({ slug, ...props }) => ({
+		params: { slug },
+		props,
+	}));
 }
+
 
 const { name, description, images, type } = Astro.props;
 
