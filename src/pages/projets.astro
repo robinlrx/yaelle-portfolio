@@ -62,7 +62,7 @@ import data from '../../public/data/projets.json';
 	.project-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 16px;
 		grid-row-gap: 16px;
 	}
@@ -117,7 +117,11 @@ import data from '../../public/data/projets.json';
 	// 	justify-content: center;
 	// 	align-items: center;
 	// }
-
+	@media screen and (min-width: 1500px) {
+		.project-list-img-parent {
+			height: 300px;
+		}
+	}
 	@media screen and (max-width: 768px) {
 		.project-container {
 			grid-template-columns: repeat(2, 1fr);
