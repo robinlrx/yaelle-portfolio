@@ -24,31 +24,34 @@ const { name, description, images, type } = Astro.props;
 				<div class="overlay" />
 				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(${images[0]})`>
 					<div class="header">
-						<a href="/projets" class="back">
+						<a href="/projets" class="back reveal-3">
 							<div class="btn-circle">
-							  <img src="https://assets.website-files.com/63cdb916a9b7eb2eab59844a/63f2a3514ae74308e374099b_corner-up-left.svg">
+							  <img src="img/back.svg">
 							</div>
 							<p>Retour</p>
 						</a>
-						<h1 class="title reveal-1">{name}</h1>
-						<div class="tag">
+						<h1 class="title reveal-2">{name}</h1>
+						<div class="tag reveal-3">
 							<p>{type}</p>
 						</div>
 					</div>
 				</div>
+				<a href="#down" class="down">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m12 20l-8-8l1.4-1.425l5.6 5.6V4h2v12.175l5.6-5.6L20 12l-8 8Z"/></svg>
+				</a>
 			</div>
 		</div>
 	</section>
-	<section>
+	<section id="down">
 		<div class="container is-fluid">
 			<div>
 				<div class="columns">
-					<div class="column reveal-2">
+					<div class="column reveal-1">
 						<!-- @ts-ignore -->
 						<ReactLightbox client:visible thumbnails={true} poster={images[1]} sources={images.map(image => ({ src: image }))} />
 
 					</div>
-					<div class="column reveal-2">
+					<div class="column reveal-1">
 						{description.trim().split(". ").map((sentence: string) => {
 							return <p class="sentence">{sentence}</p>
 						})}
@@ -66,6 +69,21 @@ const { name, description, images, type } = Astro.props;
 		}
 		100% {
 			padding-bottom: 0;
+		}
+	}
+
+	@keyframes scrollDown {
+		0%{
+			transform: translateY(-15px);
+			opacity: 0;
+		}
+		50%{
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		100%{
+			transform: translateY(15px);
+			opacity: 0;
 		}
 	}
 
@@ -100,6 +118,26 @@ const { name, description, images, type } = Astro.props;
 			height: 100%;
 			background-position: center;
 			background-size: cover;
+		}
+
+		.down {
+			color: white;
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: solid 1px white;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 5px;
+			overflow: hidden;
+
+			svg {
+				animation: scrollDown 2s ease-in-out infinite;
+			}
 		}
 	}
 

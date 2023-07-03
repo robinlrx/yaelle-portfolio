@@ -10,22 +10,26 @@ import Navbar from '../components/Navbar.astro';
 			<div class="columns">
 				<div class="column reveal-2">
 					<div class="block">
-						<a href="tel:+33695375102">
+						<a href="tel:+33627555364" class="rs">
 							<div class="i ic:baseline-local-phone"></div>
-							<p>0695375102</p>
+							<p>06.27.55.53.64</p>
 						</a>
 					</div>
 					<div class="block">
-						<a href="mailto:inesbenrhannou@gmail.com">
+						<a href="mailto:yaelle.zaoui@gmail.com" class="rs">
 							<div class="i material-symbols:mail"></div>
-							<p>inesbenrhannou@gmail.com</p>
+							<p>yaelle.zaoui@gmail.com</p>
 						</a>
 					</div>
 					<div class="block">
-						<a href="https://www.linkedin.com/m/in/ines-benrhannou-840aa1202" target="_blank">
+						<a href="https://fr.linkedin.com/in/ya%C3%ABlle-zaoui-8284401b9" target="_blank" class="rs">
 							<div class="i ri:linkedin-fill"></div>
 							<p>Linkedin</p>
 						</a>
+					</div>
+					<div class="block cv">
+						<iframe src="/pdf/Zaoui-Yaelle-CVV-pro-diplome.pdf" width="80%" height="600px" class="is-hidden-touch"></iframe>
+						<a href="/pdf/Zaoui-Yaelle-CVV-pro-diplome.pdf" download class="button">Télécharger mon sketchbook</a>
 					</div>
 				</div>
 			</div>
@@ -39,9 +43,10 @@ import Navbar from '../components/Navbar.astro';
 		padding-top: 100px;
 		min-height: 100vh;
 		overflow: hidden;
+		padding-bottom: 50px;
 
 		h1 {
-			color: black !important;
+			color: #045E51 !important;
 			font-size: 3rem !important;
 			font-family: 'PF Din Text Universal thin';
 			margin-bottom: 80px !important;
@@ -50,16 +55,16 @@ import Navbar from '../components/Navbar.astro';
 		}
 
 		h2 {
-			color: black !important;
+			color: #045E51 !important;
 			font-family: 'PF Din Text Universal thin';
 			font-size: 2rem !important;
 			// align-self: baseline;
 			// border: solid 1px yellow;
 		}
 
-		a {
+		.rs {
 			font-size: 2rem !important;
-			color: black !important;
+			color: #045E51 !important;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -68,6 +73,29 @@ import Navbar from '../components/Navbar.astro';
 				margin-left: 10px;
 				font-family: 'PF Din Text Universal regular';
 				word-break: break-all;
+			}
+		}
+
+		.cv {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.button {
+			background-color: black;
+			color: white;
+			border: solid 1px transparent;
+			transition: all 0.3s ease-in-out;
+			font-family: 'PF Din Text Universal regular';
+			font-size: 1rem;
+			margin-top: 20px;
+
+			&:hover {
+				background-color: white;
+				color: black;
+				border-color: black;
 			}
 		}
 	}
