@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import data from '../../public/data/projets.json';
 import Navbar from '../components/Navbar.astro';
+import ReactLightbox from '../components/ReactLightbox';
+
 export const getStaticPaths = async () => {
 	const pages = data;
 	return pages.map(({ slug, ...props }) => ({
@@ -14,7 +16,7 @@ export const getStaticPaths = async () => {
 const { name, description, images, type } = Astro.props;
 
 ---
-<Layout title={name}>
+<Layout title={`${name} - Yaëlle Zaoui`}>
 	<Navbar />
 	<section>
 		<div class="container is-fluid">
@@ -22,28 +24,29 @@ const { name, description, images, type } = Astro.props;
 				<div class="overlay" />
 				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(${images[0]})`>
 					<div class="header">
-						<a href="/design" class="back">
+						<a href="/projets" class="back">
 							<div class="btn-circle">
 							  <img src="https://assets.website-files.com/63cdb916a9b7eb2eab59844a/63f2a3514ae74308e374099b_corner-up-left.svg">
 							</div>
-							<div class="div-hide rel-3">
-								<p>ALL PROJECTS</p>
-								<p>ALL PROJECTS</p>
-							</div>
+							<p>Retour</p>
 						</a>
-						  
 						<h1 class="title reveal-1">{name}</h1>
 						<div class="tag">
 							<p>{type}</p>
 						</div>
 					</div>
 				</div>
-				<!-- <img src={images[0]} alt=""> -->
 			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container is-fluid">
 			<div>
 				<div class="columns">
 					<div class="column reveal-2">
-						<img src={images[1]} alt="">
+						<!-- @ts-ignore -->
+						<ReactLightbox client:visible thumbnails={true} poster={images[1]} sources={images.map(image => ({ src: image }))} />
+
 					</div>
 					<div class="column reveal-2">
 						{description.trim().split(". ").map((sentence: string) => {
@@ -89,6 +92,7 @@ const { name, description, images, type } = Astro.props;
 			bottom: 0;
 			background-color: white;
 			animation: slideIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+			animation-delay: 0.5s;
 		}
 
 		.landscape {
@@ -156,6 +160,14 @@ const { name, description, images, type } = Astro.props;
 			color: black !important;
 			width: 80%; // same as lightbox image
 			font-family: 'PF Din Text Universal regular';
+		}
+	}
+
+	@media screen and (max-width: 580px) {
+		.header {
+			flex-direction: column;
+			height: 100%;
+			justify-content: space-around;
 		}
 	}
 </style>

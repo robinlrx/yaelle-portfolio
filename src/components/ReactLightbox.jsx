@@ -12,7 +12,7 @@ const ReactLightbox = ({poster, sources, thumbnails}) => {
 
 	return (
 		<>
-			<img src={poster} width={"80%"} alt="" onClick={() => setOpen(true)} style={{cursor: 'pointer', marginBottom: '20px'}} />
+			<img src={poster} width="100%" alt="" onClick={() => setOpen(true)} style={{cursor: 'pointer'}} />
 			<Lightbox
 				open={open}
 				close={() => setOpen(false)}

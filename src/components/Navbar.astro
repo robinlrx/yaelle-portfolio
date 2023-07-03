@@ -21,8 +21,7 @@ const { page } = Astro.props;
 			</div> -->
 			<div class="navbar-end">
 				<div class="navbar-item">
-					<a class:list={['navbar-item', { active: page === 'design' }]} href="/design">Projets</a>
-					<a class:list={['navbar-item', { active: page === 'projets' }]} href="/projets">OldProjets</a>
+					<a class:list={['navbar-item', { active: page === 'projets' }]} href="/projets">Projets</a>
 					<!-- <a class:list={['navbar-item', { active: page === 'portfolio' }]} href="/portfolio">CV/Portfolio</a> -->
 					<!-- <a class:list={['navbar-item', { active: page === 'master' }]} href="/master">Master</a> -->
 					<a class:list={['navbar-item', { active: page === 'contact' }]} href="/contact">Contact</a>
@@ -39,7 +38,7 @@ const { page } = Astro.props;
 		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: rgba($color: transparent, $alpha: 0.0) !important;
+		// background-color: rgba($color: transparent, $alpha: 0.0) !important;
 
 		.navbar-menu {
 			background-color: inherit;

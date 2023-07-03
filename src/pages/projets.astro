@@ -1,42 +1,38 @@
 ---
-// 2 proj du book
+import type { isRenderTemplateResult } from "astro/dist/runtime/server/render/astro";
+
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import ReactLightbox from '../components/ReactLightbox.jsx';
+import data from '../../public/data/projets.json';
 ---
 
-
-<Layout title="Projets - Ines Benrhannou">
+<Layout title="Projets - Yaëlle Zaoui">
 	<Navbar page="projets" />
 	<section>
 		<div class="container is-fluid">
 			<h1 class="title reveal-1">Projets</h1>
-			<div class="columns">
-				<div class="column reveal-2">
-					<h2 class="subtitle">BMW</h2>
-					<ReactLightbox client:visible thumbnails={true} poster="/img/projets/mercedes-0009.jpg" sources={[{ src: "/img/projets/mercedes-0003.jpg" }, { src: "/img/projets/mercedes-0004.jpg" }, { src: "/img/projets/mercedes-0005.jpg" }, { src: "/img/projets/mercedes-0006.jpg" }, { src: "/img/projets/mercedes-0007.jpg" }, { src: "/img/projets/mercedes-0008.jpg" }, { src: "/img/projets/mercedes-0009.jpg" }]} />
-				</div>
-			</div>
-			<div class="columns">
-				<div class="column reveal-2">
-					<h2 class="subtitle">Peugeot</h2>
-					<ReactLightbox client:only="react" thumbnails={true} poster="/img/projets/peugeot-0010.jpg" sources={[{ src: "/img/projets/peugeot-0010.jpg" }, { src: "/img/projets/peugeot-0011.jpg" }, { src: "/img/projets/peugeot-0012.jpg" }, { src: "/img/projets/peugeot-0013.jpg" }, { src: "/img/projets/peugeot-0014.jpg" }]} />
-				</div>
-			</div>
-			<div class="columns">
-				<div class="column reveal-2">
-					<h2 class="subtitle">LS Studio</h2>
-					<ReactLightbox client:only="react" thumbnails={true} poster="/img/projets/lsstudio-0003.jpg" sources={[{ src: "/img/projets/lsstudio-0003.jpg" }, { src: "/img/projets/lsstudio-0004.jpg" }, { src: "/img/projets/lsstudio-0005.jpg" }, { src: "/img/projets/lsstudio-0006.jpg" }]} />
-				</div>
-			</div>
-			<div class="columns">
-				<div class="column reveal-2">
-					<h2 class="subtitle">India Diwali</h2>
-					<ReactLightbox client:only="react" thumbnails={true} poster="/img/projets/india-011.jpg" sources={[{ src: "/img/projets/india-001.jpg" }, { src: "/img/projets/india-002.jpg" }, { src: "/img/projets/india-003.jpg" }, { src: "/img/projets/india-004.jpg" }, { src: "/img/projets/india-004.jpg" }, { src: "/img/projets/india-005.jpg" }, { src: "/img/projets/india-006.jpg" }, { src: "/img/projets/india-007.jpg" }, { src: "/img/projets/india-008.jpg" }, { src: "/img/projets/india-009.jpg" }, { src: "/img/projets/india-010.jpg" }, { src: "/img/projets/india-011.jpg" }, { src: "/img/projets/india-012.jpg" },]} />
-				</div>
+			<div class="project-container">
+				{data.map((item, index) => (
+					// @ts-ignore
+					<div class="project-item" key={index}>
+						<a href={item.slug} class="project-list-parent">
+							<div class="project-list-top">
+								<div class="project-list-img-parent" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${item.thumbnail})`}>
+									<div class="project-tag">
+										<p>{item.type}</p>
+									</div>
+								</div>
+							</div>
+							<div class="project-list-btm">
+								<p>Project</p>
+								<p>{item.name}</p>
+							</div>
+						</a>
+					</div>
+				))}
 			</div>
 		</div>
-		<!-- quelques sketch et un du design -->
 	</section>
 </Layout>
 
@@ -46,30 +42,93 @@ import ReactLightbox from '../components/ReactLightbox.jsx';
 		padding-top: 100px;
 		min-height: 100vh;
 		overflow: hidden;
+		padding-bottom: 20px;
 
 		h1 {
-			color: black !important;
+			color: #045E51 !important;
 			font-size: 3rem !important;
 			font-family: 'PF Din Text Universal thin';
 			margin-bottom: 80px !important;
 			letter-spacing: 2px;
 			text-align: center;
 		}
-	}
-	.column {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		// border: solid 1px yellow;
 
-		h2 {
-			color: black !important;
-			width: 80%; // same as lightbox image
-			font-family: 'PF Din Text Universal thin';
-			font-size: 2rem !important;
-			// align-self: baseline;
-			// border: solid 1px yellow;
+		p {
+			font-family: 'PF Din Text Universal light';
+			// margin-bottom: 10px;
+		}
+	}
+
+	.project-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+	}
+
+	.project-item {
+		// width: calc(100% - 33.33%);
+		border-radius: 12px;
+		border: solid 1px black;
+		overflow: hidden;
+		padding: 0.625rem;
+		position: relative;
+	}
+
+	.project-list-parent {
+		color: #045E51 !important;
+	}
+
+	.project-list-img-parent {
+		height: 200px;
+		width: 100%;
+		// background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+		background-position: center;
+		background-size: 150% 150%;
+		background-repeat: no-repeat;
+		border-radius: 12px;
+		transition: background-size 0.3s ease-in-out;
+
+		&:hover {
+			background-size: 100% 100%;
+		}
+	}
+
+	.project-tag {
+		position: absolute;
+		// z-index: 1;
+		top: 20px;
+		right: 20px;
+		color: #D7FFD0;
+		background-color: #045E51;
+		padding: 3px 20px;
+		border: 1px solid #045E51;
+		border-radius: 20px;
+	}
+
+	// .columns {
+	// 	margin-top: 10px;
+	// }
+
+	// .column {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
+
+	@media screen and (max-width: 768px) {
+		.project-container {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 426px) {
+		.project-container {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(1, 1fr);
 		}
 	}
 </style>
