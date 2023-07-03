@@ -22,7 +22,7 @@ const { name, description, images, type } = Astro.props;
 		<div class="container is-fluid">
 			<div class="hero">
 				<div class="overlay" />
-				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(${images[0]})`>
+				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(/img/${images[0]})`>
 					<div class="header">
 						<a href="/projets" class="back reveal-3">
 							<div class="btn-circle">
@@ -48,7 +48,7 @@ const { name, description, images, type } = Astro.props;
 				<div class="columns">
 					<div class="column reveal-1">
 						<!-- @ts-ignore -->
-						<ReactLightbox client:visible thumbnails={true} poster={images[1]} sources={images.map(image => ({ src: image }))} />
+						<ReactLightbox client:visible thumbnails={true} poster={`/img/${images[1]}`} sources={images.map(image => ({ src: `/img/${image}` }))} />
 
 					</div>
 					<div class="column reveal-1">
