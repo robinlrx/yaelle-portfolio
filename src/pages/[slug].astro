@@ -3,17 +3,29 @@ import Layout from '../layouts/Layout.astro';
 import data from '../../public/data/projets.json';
 import Navbar from '../components/Navbar.astro';
 import ReactLightbox from '../components/ReactLightbox';
+import { contentfulClient } from "../lib/contentful";
+import type { ProjectItem } from "../lib/contentful";
 
-export const getStaticPaths = async () => {
-	const pages = data;
-	return pages.map(({ slug, ...props }) => ({
-		params: { slug },
-		props,
+export async function getStaticPaths() {
+	// @ts-ignore
+	const { items } = await contentfulClient.getEntries<ProjectItem>({
+		content_type: "projets",
+	});
+	const pages = items.map((item: any) => ({
+		params: { slug: item.fields.slug },
+		props: {
+			name: item.fields.name,
+			type: item.fields.type,
+			description: item.fields.description,
+			gallery: item.fields.gallery
+		},
 	}));
+	return pages;
 }
 
 
-const { name, description, images, type } = Astro.props;
+const { name, description, gallery, type } = Astro.props;
+// console.log(gallery[0].fields.file.url)
 
 ---
 <Layout title={`${name} - Yaëlle Zaoui`}>
@@ -22,7 +34,7 @@ const { name, description, images, type } = Astro.props;
 		<div class="container is-fluid">
 			<div class="hero">
 				<div class="overlay" />
-				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(/img/${images[0]})`>
+				<div class="landscape" style=`background-image: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(24, 24, 24, .2)), url(${gallery[0].fields.file.url})`>
 					<div class="header">
 						<a href="/projets" class="back reveal-3">
 							<div class="btn-circle">
@@ -48,7 +60,7 @@ const { name, description, images, type } = Astro.props;
 				<div class="columns">
 					<div class="column reveal-1">
 						<!-- @ts-ignore -->
-						<ReactLightbox client:visible thumbnails={true} poster={`/img/${images[1]}`} sources={images.map(image => ({ src: `/img/${image}` }))} />
+						<ReactLightbox client:visible thumbnails={true} poster={`${gallery[1].fields.file.url}`} sources={gallery.map(image => ({ src: image.fields.file.url }))} />
 
 					</div>
 					<div class="column reveal-1">

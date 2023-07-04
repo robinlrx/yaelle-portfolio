@@ -2,6 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import data from '../../public/data/projets.json';
+import { contentfulClient } from "../lib/contentful";
+import type { ProjectItem } from "../lib/contentful";
+
+// @ts-ignore
+const entries = await contentfulClient.getEntries<ProjectItem>({
+  content_type: "projets",
+});
+
+const projects = entries.items.map((item: any) => {
+	const { name, description, gallery, type, slug } = item.fields;
+	return {
+		name,
+		description,
+		gallery,
+		type,
+		slug
+	};
+}).sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
 ---
 
 <Layout title="Projets - Yaëlle Zaoui">
@@ -10,12 +28,12 @@ import data from '../../public/data/projets.json';
 		<div class="container is-fluid">
 			<h1 class="title reveal-1">Projets</h1>
 			<div class="project-container">
-				{data.map((item, index) => (
+				{projects.map((item) => (
 					// @ts-ignore
-					<div class="project-item" key={index}>
+					<div class="project-item">
 						<a href={`/${item.slug}`} class="project-list-parent">
 							<div class="project-list-top">
-								<div class="project-list-img-parent" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/${item.thumbnail})`}>
+								<div class="project-list-img-parent" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${item.gallery[0].fields.file.url})`}>
 									<div class="project-tag">
 										<p>{item.type}</p>
 									</div>
