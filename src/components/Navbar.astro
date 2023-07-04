@@ -3,7 +3,7 @@ const { page } = Astro.props;
 ---
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
-	<div class="container is-fluid">
+	<div class="container">
 		<div class="navbar-brand">
 			<a class="navbar-item logo" href="/">
 				<img src="/img/logo.png" alt="">
@@ -38,7 +38,8 @@ const { page } = Astro.props;
 		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: rgba($color: transparent, $alpha: 0.0) !important;
+		background-color: transparent !important;
+		backdrop-filter: blur(10px);
 		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
 		.navbar-menu {
